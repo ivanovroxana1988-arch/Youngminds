@@ -1,0 +1,90 @@
+name: Sync published site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download published YoungMinds site
+        shell: bash
+        run: |
+          set -euo pipefail
+          base="https://youngminds.live"
+          mkdir -p img
+
+          download() {
+            local url="$1"
+            local output="$2"
+            curl --fail --location --retry 5 --retry-delay 2 --silent --show-error "$url" --output "$output"
+          }
+
+          download "$base/" index.html
+          download "$base/activitati" activitati.html
+          download "$base/contact" contact.html
+          download "$base/metoda" metoda.html
+          download "$base/scoala-de-vara" scoala-de-vara.html
+          download "$base/spatiul" spatiul.html
+          download "$base/tarife" tarife.html
+          download "$base/style.css" style.css
+
+          cat > CNAME <<'EOF'
+          youngminds.live
+          EOF
+
+          cat > vercel.json <<'EOF'
+          {
+            "cleanUrls": true,
+            "trailingSlash": false
+          }
+          EOF
+
+          cat > .gitignore <<'EOF'
+          .vercel/
+          EOF
+
+          for asset in \
+            logo.png \
+            playground-hammock.jpg \
+            playground-swings-2.jpg \
+            playground-victory.jpg \
+            playground-wide.jpg \
+            study-boy-fish-art.jpg \
+            study-boy-focus.jpg \
+            study-boy-pencils.jpg \
+            study-girl-crown.jpg \
+            study-girl-side.jpg \
+            study-girl-writing.jpg \
+            study-girls-yellow.jpg \
+            study-group-1.jpg \
+            study-room-activity.jpg \
+            study-room-wide.jpg \
+            study-row-window.jpg \
+            study-table-long.jpg \
+            study-two-girls.jpg
+          do
+            download "$base/img/$asset" "img/$asset"
+          done
+
+      - name: Commit synced files
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .
+          if git diff --cached --quiet; then
+            echo "No site changes to commit."
+          else
+            git commit -m "Sync published YoungMinds site"
+            git push
+          fi

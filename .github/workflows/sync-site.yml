@@ -25,7 +25,7 @@ jobs:
           download() {
             local url="$1"
             local output="$2"
-            curl --fail --location --retry 5 --retry-delay 2 --silent --show-error "$url" --output "$output"
+            curl --fail --location --retry 8 --retry-connrefused --retry-delay 2 --silent --show-error "$url" --output "$output"
           }
 
           download "$base/" index.html
@@ -54,6 +54,7 @@ jobs:
 
           for asset in \
             logo.png \
+            playground-garden-class.jpg \
             playground-hammock.jpg \
             playground-swings-2.jpg \
             playground-victory.jpg \

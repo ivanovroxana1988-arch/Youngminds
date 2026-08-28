@@ -21,14 +21,17 @@ jobs:
         shell: python
         run: |
           from pathlib import Path
+          import re
 
           page = Path("despre-noi.html")
           html = page.read_text(encoding="utf-8")
-          old = '<meta name="robots" content="noindex, nofollow">'
-          new = '<meta name="robots" content="index, follow">'
-          if old not in html:
-              raise SystemExit("Expected noindex tag was not found; refusing to modify the page blindly.")
-          html = html.replace(old, new, 1)
+          pattern = re.compile(
+              r'<meta\b(?=[^>]*\bname\s*=\s*["\']robots["\'])(?=[^>]*\bcontent\s*=\s*["\'][^"\']*noindex[^"\']*["\'])[^>]*>',
+              re.IGNORECASE,
+          )
+          html, count = pattern.subn('<meta name="robots" content="index, follow">', html, count=1)
+          if count != 1:
+              raise SystemExit("Could not find exactly one robots meta tag containing noindex.")
           page.write_text(html, encoding="utf-8")
 
           sitemap = Path("sitemap.xml")

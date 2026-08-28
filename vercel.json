@@ -1,4 +1,18 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "youngminds.live"
+        }
+      ],
+      "destination": "https://www.youngminds.live/:path*",
+      "permanent": true
+    }
+  ]
 }

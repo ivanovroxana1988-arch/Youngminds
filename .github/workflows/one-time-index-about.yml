@@ -3,7 +3,7 @@ name: One-time index About page
 on:
   push:
     branches:
-      - seo/index-despre-noi
+      - main
 
 permissions:
   contents: write
@@ -12,10 +12,10 @@ jobs:
   index-about:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out branch
+      - name: Check out main
         uses: actions/checkout@v4
         with:
-          ref: seo/index-despre-noi
+          ref: main
 
       - name: Make About page indexable and add to sitemap
         shell: python
@@ -53,4 +53,4 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add despre-noi.html sitemap.xml .github/workflows/one-time-index-about.yml
           git commit -m "fix(seo): make About page indexable"
-          git push origin HEAD:seo/index-despre-noi
+          git push origin HEAD:main

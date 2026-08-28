@@ -13,19 +13,19 @@
 <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact After School Buzău | Înscrieri YoungMinds</title>
-<meta name="description" content="Contact și înscrieri YoungMinds, after school în Buzău. Programează o vizită gratuită: Str. Gîrlași 11-B, telefon 0746 220 222 sau WhatsApp.">
+<title>Înscrieri After School Buzău 2026–2027 | YoungMinds</title>
+<meta name="description" content="S-au deschis înscrierile 2026–2027 la YoungMinds, after school în Buzău. Programează o vizită: Str. Gîrlași 11-B, telefon 0746 220 222 sau WhatsApp.">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 <link rel="canonical" href="https://www.youngminds.live/contact">
 <meta property="og:locale" content="ro_RO">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="YoungMinds">
-<meta property="og:title" content="Contact After School Buzău | YoungMinds">
-<meta property="og:description" content="Programează o vizită gratuită la YoungMinds Buzău. Str. Gîrlași 11-B, telefon și WhatsApp 0746 220 222.">
+<meta property="og:title" content="Înscrieri After School Buzău 2026–2027 | YoungMinds">
+<meta property="og:description" content="S-au deschis înscrierile la YoungMinds Buzău. Programează o vizită și află dacă programul nostru se potrivește copilului tău.">
 <meta property="og:url" content="https://www.youngminds.live/contact">
 <meta property="og:image" content="https://www.youngminds.live/img/playground-wide.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Contact After School Buzău | YoungMinds">
+<meta name="twitter:title" content="Înscrieri After School Buzău 2026–2027 | YoungMinds">
 <meta name="twitter:description" content="Adresă, telefon, WhatsApp și formular de înscriere YoungMinds Buzău.">
 <meta name="twitter:image" content="https://www.youngminds.live/img/playground-wide.jpg">
 <script type="application/ld+json">
@@ -34,7 +34,7 @@
   "@type": "BreadcrumbList",
   "itemListElement": [
     {"@type":"ListItem","position":1,"name":"Acasă","item":"https://www.youngminds.live/"},
-    {"@type":"ListItem","position":2,"name":"Contact","item":"https://www.youngminds.live/contact"}
+    {"@type":"ListItem","position":2,"name":"Înscrieri","item":"https://www.youngminds.live/contact"}
   ]
 }
 </script>
@@ -55,7 +55,7 @@
     <button class="burger" aria-label="Meniu" onclick="document.querySelector('.site-nav').classList.toggle('open')"><span></span><span></span><span></span></button>
     <nav class="site-nav">
       <a href="index.html">Acasă</a>
-      <a href="scoala-de-vara.html" style="color:var(--orange)">☀️ Școala de vară</a>
+      <a href="contact.html" class="active" style="color:var(--orange)">📣 Înscrieri deschise</a>
       <a href="metoda.html">Metoda</a>
       <a href="activitati.html">Activități</a>
       <a href="spatiul.html">Spațiul</a>
@@ -66,9 +66,9 @@
 </header>
 
 <section class="page-hero"><div class="stars"></div>
-  <div class="wrap"><div class="crumb">Contact</div>
-  <h1>Contact și înscrieri After School YoungMinds Buzău</h1>
-  <p>Programează o vizită gratuită sau întreabă-ne orice. Îți răspundem repede, pe WhatsApp sau la telefon.</p></div>
+  <div class="wrap"><div class="crumb">Înscrieri 2026–2027</div>
+  <h1>S-au deschis înscrierile la YoungMinds</h1>
+  <p>Programează o vizită gratuită, cunoaște echipa și vezi spațiul înainte să alegi. Îți răspundem repede, pe WhatsApp sau la telefon.</p></div>
 </section>
 
 <section class="sec-pad">
@@ -77,7 +77,7 @@
       <h2>Vorbește direct cu noi</h2>
       <p class="ci-lead">Cel mai rapid mod să ne contactezi e pe WhatsApp — îți răspundem în timpul programului.</p>
       <div class="contact-actions">
-        <a class="btn-primary" href="https://wa.me/40746220222?text=Bun%C4%83%21%20A%C8%99%20vrea%20s%C4%83%20programez%20o%20vizit%C4%83%20gratuit%C4%83%20la%20YoungMinds." target="_blank" rel="noopener">💬 Scrie-ne pe WhatsApp</a>
+        <a class="btn-primary" href="https://wa.me/40746220222?text=Bun%C4%83%21%20A%C8%99%20vrea%20s%C4%83%20%C3%AEnscriu%20copilul%20la%20YoungMinds%20pentru%20anul%20%C8%99colar%202026-2027." target="_blank" rel="noopener">💬 Întreabă despre înscriere</a>
         <a class="btn-ghost" href="tel:+40746220222">📞 Sună: 0746 220 222</a>
       </div>
       <div class="contact-details">
@@ -124,7 +124,7 @@
       <div>
         <h4>Navighează</h4>
         <ul>
-          <li><a href="scoala-de-vara.html">☀️ Școala de vară</a></li>
+          <li><a href="contact.html">📣 Înscrieri deschise 2026–2027</a></li>
           <li><a href="metoda.html">Metoda noastră</a></li>
           <li><a href="activitati.html">Activități</a></li>
           <li><a href="spatiul.html">Spațiul nostru</a></li>
@@ -182,14 +182,14 @@ function ymSubmitEmail(e){
   e.preventDefault();
   const payload=ymFormData();
   if(!payload) return false;
-  const subject=`Înscriere YoungMinds - ${payload.data.nume}`;
+  const subject=`Înscriere YoungMinds 2026-2027 - ${payload.data.nume}`;
   window.location.href=`mailto:${ymAdminEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(payload.body)}`;
   return false;
 }
 function ymSubmitWhatsApp(){
   const payload=ymFormData();
   if(!payload) return;
-  const text=`Bună! Aș vrea să fac o înscriere la YoungMinds.\n\n${payload.body}`;
+  const text=`Bună! Aș vrea să fac o înscriere la YoungMinds pentru anul școlar 2026–2027.\n\n${payload.body}`;
   window.open('https://wa.me/40746220222?text='+encodeURIComponent(text),'_blank');
 }
 </script>

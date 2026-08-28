@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Educație crescută în familie | YoungMinds</title>
+<meta name="description" content="Povestea YoungMinds: atmosferă de familie, construcție pedagogică, experiență la clasă și timp real pentru copilărie.">
+<meta name="robots" content="noindex,nofollow,noarchive,nosnippet,noimageindex">
+<meta name="googlebot" content="noindex,nofollow,noarchive,nosnippet,noimageindex">
+<link rel="icon" type="image/png" href="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.story-preview{background:#fbf7ee;color:var(--ink)}
+.preview-note{background:#fff1d6;border-bottom:1px solid rgba(247,144,9,.2);color:#6f552b;font-size:.82rem;text-align:center;padding:7px 18px}
+.story-hero{padding:72px 0 64px;background:linear-gradient(135deg,#fbf7ee 0%,#fff 58%,#fff1dc 100%);overflow:hidden}
+.story-hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:54px;align-items:center}
+.story-eyebrow,.story-kicker{font-family:'Baloo 2';font-weight:700;color:var(--orange);text-transform:uppercase;letter-spacing:.07em;font-size:.9rem}
+.story-hero h1{font-size:clamp(3.4rem,6vw,5.6rem);letter-spacing:-.045em;color:var(--ink);margin:14px 0 22px;line-height:.95}
+.story-hero h1 span{color:var(--orange)}
+.story-hero .lead{font-size:1.22rem;color:var(--ink-soft);max-width:620px;margin-bottom:28px}
+.story-hero-photo,.story-photo{border-radius:28px;overflow:hidden;box-shadow:0 20px 55px rgba(42,42,82,.15);background:#e8e2d8}
+.story-hero-photo img{width:100%;height:470px;object-fit:cover}
+.story-photo img{width:100%;height:100%;object-fit:cover}
+.story-facts{margin-top:-24px;position:relative;z-index:3}
+.story-facts-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.story-fact{background:#fff;border:1px solid rgba(91,95,199,.08);border-radius:20px;padding:21px 20px;box-shadow:0 9px 28px rgba(42,42,82,.07)}
+.story-fact strong{font-family:'Baloo 2';font-size:1.6rem;color:var(--periwinkle);display:block;line-height:1.05}
+.story-fact span{font-size:.91rem;color:var(--ink-soft)}
+.story-section{padding:88px 0}
+.story-section.white{background:#fff}
+.story-split{display:grid;grid-template-columns:.92fr 1.08fr;gap:58px;align-items:center}
+.story-copy h2,.story-center h2{font-size:clamp(2.35rem,4.3vw,3.5rem);color:var(--ink);margin:8px 0 22px;letter-spacing:-.025em}
+.story-copy p,.story-center p{font-size:1.08rem;color:var(--ink-soft);margin-bottom:17px}
+.story-quote{margin-top:28px;border-left:4px solid var(--orange);background:#fff5e7;padding:22px 24px;border-radius:0 18px 18px 0;font-family:'Baloo 2';font-size:1.25rem;color:#65451f}
+.story-quote small{display:block;font-family:'Nunito';font-size:.86rem;margin-top:5px;color:#8b6d48}
+.story-pedagogy{background:var(--space-deep);color:#fff;padding:88px 0}
+.story-pedagogy .story-kicker{color:var(--gold)}
+.story-pedagogy h2{color:#fff;font-size:clamp(2.4rem,4vw,3.5rem);max-width:770px;margin:8px 0 18px}
+.story-pedagogy>.wrap>p{color:#d1d1ee;font-size:1.12rem;max-width:900px}
+.story-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}
+.story-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);border-radius:22px;padding:26px}
+.story-card h3{font-size:1.35rem;color:#fff;margin-bottom:9px}
+.story-card p{color:#cfcfea;font-size:.98rem}
+.bogdan-line{margin-top:30px;color:#bfc0e6;font-size:.92rem;border-top:1px solid rgba(255,255,255,.12);padding-top:21px}
+.bogdan-line strong{color:#fff}
+.teacher-grid{display:grid;grid-template-columns:1.03fr .97fr;gap:58px;align-items:center}
+.teacher-grid .story-photo{height:570px}
+.story-tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
+.story-tag{background:#f3edff;color:var(--periwinkle-deep);border-radius:999px;padding:8px 13px;font-family:'Baloo 2';font-weight:600;font-size:.9rem}
+.story-center{text-align:center;max-width:820px;margin:0 auto}
+.story-day{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:38px}
+.day-card{background:#fff;border:1px solid rgba(91,95,199,.08);border-radius:22px;padding:25px;box-shadow:0 5px 24px rgba(42,42,82,.06)}
+.day-no{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--gold);color:var(--space-deep);font-family:'Baloo 2';font-weight:800;margin-bottom:14px}
+.day-card h3{font-size:1.23rem;margin-bottom:8px;color:var(--ink)}
+.day-card p{color:var(--ink-soft);font-size:.96rem}
+.safety-callout{margin-top:42px;background:linear-gradient(135deg,#fff0db,#fff);border-radius:26px;padding:34px 36px;border:1px solid rgba(247,144,9,.16)}
+.safety-callout h3{font-size:1.75rem;color:var(--ink);margin-bottom:10px}
+.safety-callout p{font-size:1.06rem;color:var(--ink-soft);max-width:930px}
+.story-cta{padding:84px 0;text-align:center;background:#fff}
+.story-cta-box{max-width:900px;margin:auto;background:var(--cream);border-radius:30px;padding:50px 34px;border:1px solid rgba(91,95,199,.08)}
+.story-cta h2{font-size:clamp(2.3rem,4vw,3.3rem);color:var(--ink);margin:8px 0 15px}
+.story-cta p{color:var(--ink-soft);font-size:1.08rem;max-width:700px;margin:0 auto 26px}
+.story-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+@media(max-width:900px){.story-hero-grid,.story-split,.teacher-grid{grid-template-columns:1fr}.story-facts-grid,.story-day{grid-template-columns:repeat(2,1fr)}.story-cards{grid-template-columns:1fr}.story-hero-photo img{height:380px}.teacher-grid .story-photo{height:500px}.story-split .story-photo{order:-1}.story-section{padding:68px 0}}
+@media(max-width:560px){.story-hero{padding:48px 0}.story-facts-grid,.story-day{grid-template-columns:1fr}.story-hero h1{font-size:3.35rem}.teacher-grid .story-photo{height:430px}.story-cta-box{padding:38px 22px}.story-preview .site-header .brand img{height:40px}}
+</style>
+</head>
+<body class="story-preview">
+<div class="preview-note">Pagină de lucru YoungMinds · neindexată și nelinkuită în site</div>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="YoungMinds"><img src="img/logo.png" alt="YoungMinds"></a>
+    <a class="btn-ghost" href="index.html">Înapoi la site</a>
+  </div>
+</header>
+
+<main>
+<section class="story-hero">
+  <div class="wrap story-hero-grid">
+    <div>
+      <div class="story-eyebrow">Povestea YoungMinds</div>
+      <h1>Educație <span>crescută</span> în familie.</h1>
+      <p class="lead">YoungMinds este locul în care temele, joaca, prieteniile și curiozitatea pot încăpea în aceeași după-amiază. Un spațiu în care copilul este cunoscut, nu doar supravegheat, și în care educația începe cu sentimentul că ești în siguranță.</p>
+      <a class="btn-primary" href="#poveste">Descoperă povestea ↓</a>
+    </div>
+    <div class="story-hero-photo">
+      <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDACweISchHCwnJCcyLyw1Qm9IQj09QohhZlBvoY2ppp6Nm5ixx//Ysbzxv5ib3v/g8f//////rNX/////////////2wBDAS8yMkI6QoJISIL/t5u3////////////////////////////////////////////////////////////////////wgARCADwAUADASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAECAwT/xAAXAQEBAQEAAAAAAAAAAAAAAAAAAQID/9oADAMBAAIQAxAAAAHtV47jRMtZIFws6ZkqvL6fN6d4115bssSESywomjHn9Pmxr12XGwKlAKkN3AiaW3FxdMxNzNlIWSzpiWWvL349NZ7zernjN51EoihLB5vR58b9dlxoAAAQAAqMbhjWdazrGqgSzpiXOq8+os7ObedyC3GpVzJOjnYcenJfaM6AAASwFIsIMbZ0sWWUBLN4zrOl453z1nY1kaszuWay1Ixarnjrzzfaz5831PNs7AAAAlggxsLAlsC501nnuarlx78LnoXebCy6zrOmdFm+ZnGN85dXepuZ2jPfy+hNAQAJc6M2MboQFAjM3LrEN+f0ea56Wa1mWSzdxqWzKzcylnLWZe+euM6l0Oe5mz0iJLACLTIxuoFADGOudTNzqt+XvxudazvWZLUmpVy0MWjzt4l9Ll1zprOVxnPW49QlSwlADKXGwKkHPlN41rmrtrMlvDWbNb5WztvhtrblbNsDpHBm5Jd9sbzpz6ZOHTm1n3Xw95ewgADFTG6Bx7ebWcWXeQNZgFIDWseiXGtxeTrF5c/V5mYLOvbybl7454ULlZT09OXXNAEMjG6lJ5fVz1ng3nebZaJTO8jN32zfP230AJNYjPPplrz2XWEoShLC9m86u8bARLDIxuoCNRnUThcN51cDUyPR049s6dOXUCxjfOJy6clazdZjQ5bx0MXpCdePbOrvGxLEACVmjOdDXPtzPKN5AR1i9Umr147TbGqvPfOM8PR51aw1nbA3eY2wNd/P3zrXTn0EsQCqrnmpc7g3mDyvWs8j15THWJpi5N9MdEzNjnOsOfPda8zWdYAAA13lzq9OewhKg2Ss46c42zGt3mSwWoRL0SaqwiqKAgyznoOU7DhPQPLr0F5zrZcapIogLLKY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" alt="Florentina Maia Vizitiu și Laurențiu Bunicu Vizitiu la YoungMinds">
+    </div>
+  </div>
+</section>
+
+<div class="story-facts">
+  <div class="wrap story-facts-grid">
+    <div class="story-fact"><strong>20</strong><span>maximum de copii în grupă</span></div>
+    <div class="story-fact"><strong>7–8</strong><span>copii odată în timpul temelor</span></div>
+    <div class="story-fact"><strong>≈ 2 ore</strong><span>dedicate temelor și consolidării</span></div>
+    <div class="story-fact"><strong>47 ani</strong><span>de experiență la catedră</span></div>
+  </div>
+</div>
+
+<section class="story-section white" id="poveste">
+  <div class="wrap story-split">
+    <div class="story-photo" style="height:520px"><img src="img/playground-wide.jpg" alt="Curtea YoungMinds, spațiu pentru joacă și socializare"></div>
+    <div class="story-copy">
+      <div class="story-kicker">O poveste de familie</div>
+      <h2>Un loc care a început cu o întrebare foarte simplă.</h2>
+      <p>YoungMinds a crescut din dorința de a crea un loc în care copiii să nu simtă că după școală începe încă o școală. Să poată învăța, dar și să alerge. Să își termine temele, dar și să își facă prieteni. Să aibă structură fără să piardă sentimentul de libertate.</p>
+      <p>Florentina „Maia” Vizitiu coordonează managementul centrului și organizarea de evenimente pentru copii. Alături de Laurențiu „Bunicu” Vizitiu, este parte din lucrurile mici care transformă un program într-un loc familiar: masa, hăinuțele, o nevoie medicală, un copil care are o zi mai grea sau unul care pur și simplu vrea să povestească ceva.</p>
+      <p>De aici vine poate cea mai simplă definiție a YoungMinds: atmosfera unei familii extinse, într-un spațiu construit pentru nevoile reale de învățare, joacă și dezvoltare ale copiilor.</p>
+      <div class="story-quote">„Veselia din curte mă încarcă în fiecare zi.”<small>Florentina „Maia” Vizitiu</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="story-pedagogy">
+  <div class="wrap">
+    <div class="story-kicker">Construcție pedagogică</div>
+    <h2>Atmosfera de acasă nu înseamnă educație făcută la întâmplare.</h2>
+    <p>Bogdan Vizitiu, tatăl celor două fete care au inspirat povestea YoungMinds, contribuie la arhitectura pedagogică a programului și la validarea multora dintre metodele folosite. Ideea centrală este una foarte practică: nu copilul trebuie împins într-o metodă rigidă, ci intervenția educațională trebuie adaptată copilului.</p>
+    <div class="story-cards">
+      <div class="story-card"><h3>Structură fără rigiditate</h3><p>Există timp pentru teme și consolidare, dar și pentru mișcare, joc, lectură și explorare. După ore petrecute în bancă, copiii nu au nevoie de încă o mini-școală până seara.</p></div>
+      <div class="story-card"><h3>Atenție acolo unde e nevoie</h3><p>Copiii nu au aceeași nevoie în același moment. Unul cere o explicație suplimentară, altul are nevoie de puțin spațiu înainte să se poată concentra din nou.</p></div>
+      <div class="story-card"><h3>Curiozitatea rămâne în program</h3><p>Învățarea continuă și după ce caietele se închid, prin lectură, jocuri, activități practice și conversații care îi lasă pe copii să pună întrebări.</p></div>
+    </div>
+    <div class="bogdan-line"><strong>Bogdan Vizitiu</strong> · psihologie, learning, coaching și dezvoltarea oamenilor · bogdanvizitiu.com</div>
+  </div>
+</section>
+
+<section class="story-section white">
+  <div class="wrap teacher-grid">
+    <div class="story-copy">
+      <div class="story-kicker">Experiență la clasă</div>
+      <h2>47 de ani la catedră. Și încă plăcerea de a lucra cu copiii.</h2>
+      <p>Doamna învățătoare Coman Floarea este absolventă a Liceului Pedagogic, are 47 de ani de experiență ca învățătoare și a format, la rândul ei, cadre didactice.</p>
+      <p>La YoungMinds, experiența ei se vede mai ales în lucrurile care nu încap într-un CV: răbdarea de a explica încă o dată, capacitatea de a observa când un copil nu a înțeles și momentul în care este mai bine să îl lași să încerce singur.</p>
+      <p>Temele se lucrează în grupuri de aproximativ 7–8 copii, pentru ca atenția adultului să poată fi distribuită real. În mod obișnuit, aproximativ două ore sunt dedicate temelor și consolidării. După aceea, educația continuă altfel.</p>
+      <div class="story-tags"><span class="story-tag">Club de lectură</span><span class="story-tag">Jocuri interactive</span><span class="story-tag">Cultură generală</span><span class="story-tag">Activități de îndemânare</span></div>
+    </div>
+    <div class="story-photo">
+      <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDACweISchHCwnJCcyLyw1Qm9IQj09QohhZlBvoY2ppp6Nm5ixx//Ysbzxv5ib3v/g8f//////rNX/////////////2wBDAS8yMkI6QoJISIL/t5u3////////////////////////////////////////////////////////////////////wgARCAFAAPADASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAECAwT/xAAXAQEBAQEAAAAAAAAAAAAAAAAAAQID/9oADAMBAAIQAxAAAAHeWplDCsrZKEjc01hFwu2uWqiZmoDGgAAAAAASpVJSLM1146icEsJVlTScuEXC7a5bKJrNQGNNBQMEAAEIBVcORAd+JthRRVxka4Wji4wi4XfXLVRNZqB50mSPPONZ0Uqza+al6UqxqSkJa59uI0400xpdIpHPdTGEVK7656KJrNTRnTw1myFuVyroyuYAq+jl6JaAzpxS7cQus3OpqwrC5bjXOOaalejTPRSanNAedZ3neoxKWpConZXPPvj0DAzomp7cXpneKmo1JMia3nNZt5uja5qhNZoEZ1I89R3FjUhYlU756QhqUQdeI1EplUTQgG5Y0M6LiwmozpyiVoVMqCSiwVc6Xvzarsh5sgdeKxDOlI1QAAinNF3jU00Jt6ZXMtUkTihizq8gsdS5rTbm3V4vK8mnCtpDHIAwoZFoVkk3SQlXiJuZyVmOwBqA5XtjqvO2XmpaGKhxUjuNpWOJZQUgFSoskYIYgMUAlGAbY7LlIXmkAVNCQytJuWMh2UBNIBQGIJsKENhKkFlATT2w2rFIc0ADQFINTMlmpqwYTSG1QQFCsGOUTQmqsBOUNMLGNMoAAYKpKWuQqQNhNASqoVgDGClE1YqesRbJXydXLrNppEAFSwRRpF5S1NoC5WSoApkPRmL6GYVoSy2gECy6aueQCyQAWiJ0mpVLVhU0bOaztiARCaEhRKKJChACKupuTkmjUl25ZbkqR2QJjp7S41qGb0DNahk9AyNQyeoZPQIbBMDltaSxLsmdAy1bMVuWFKgTZLaAAAAABOIt89S7GTqyaTmNHWWgyXSlVQFQ2PSKsbTABEAoNIAAAcsdfJTc6rrGhlTRQqBNEObKzNFYmEAAAErRGdtLSaRABjsHDqor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" alt="Doamna învățătoare Coman Floarea lucrând cu un copil">
+    </div>
+  </div>
+</section>
+
+<section class="story-section">
+  <div class="wrap">
+    <div class="story-center"><div class="story-kicker">O după-amiază la YoungMinds</div><h2>Mai mult decât o listă de activități.</h2><p>Nu fiecare copil vine după școală în aceeași stare și nu fiecare zi trebuie să arate identic. Păstrăm o structură clară, dar suficientă flexibilitate încât programul să rămână al copilului, nu copilul al programului.</p></div>
+    <div class="story-day">
+      <div class="day-card"><div class="day-no">1</div><h3>Ajunge și se așază</h3><p>Masă, tranziție și timp să iasă din ritmul școlii.</p></div>
+      <div class="day-card"><div class="day-no">2</div><h3>Temele, cu sprijin</h3><p>Lucru în grupuri mici, explicații și încurajare spre autonomie.</p></div>
+      <div class="day-card"><div class="day-no">3</div><h3>Explorează</h3><p>Lectură, jocuri, activități practice și materiale educative.</p></div>
+      <div class="day-card"><div class="day-no">4</div><h3>Iese în curte</h3><p>Mișcare, socializare, joacă și timp real pentru copilărie.</p></div>
+    </div>
+    <div class="safety-callout"><h3>Siguranța înseamnă mai mult decât supraveghere.</h3><p>Un copil este în siguranță și atunci când știe că poate cere ajutor, când poate greși fără teamă și când simte că adultul din fața lui îl vede. Asta încercăm să construim zilnic: un loc în care copiii pot învăța și explora fără să lase copilăria la ușă.</p></div>
+  </div>
+</section>
+
+<section class="story-cta">
+  <div class="wrap"><div class="story-cta-box"><div class="story-kicker">YoungMinds</div><h2>Teme, joacă, prietenii și copilărie. În același loc.</h2><p>Maximum 20 de copii, lucru pentru teme în grupuri mici și o echipă în care experiența pedagogică se întâlnește cu atmosfera de familie.</p><div class="story-actions"><a class="btn-primary" href="https://wa.me/40746220222?text=Bun%C4%83%21%20A%C8%99%20vrea%20s%C4%83%20programez%20o%20vizit%C4%83%20la%20YoungMinds." target="_blank" rel="noopener">Programează o vizită</a><a class="btn-ghost" href="tel:+40746220222">0746 220 222</a></div></div></div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div><img class="flogo" src="img/logo.png" alt="YoungMinds"><p class="tagline">Afterschool în Buzău cu teme, explorare, joacă și atenție reală pentru copii.</p></div>
+      <div><h4>YoungMinds</h4><ul><li>Educație crescută în familie</li><li>Maximum 20 de copii</li><li>Grupe mici la teme</li></ul></div>
+      <div><h4>Contact</h4><ul><li>📞 <a href="tel:+40746220222">0746 220 222</a></li><li>✉️ <a href="mailto:office@youngminds.live">office@youngminds.live</a></li></ul></div>
+      <div><h4>Locație</h4><ul><li>📍 Str. Gîrlași, nr. 11-B,<br>Buzău 120077</li><li>🕐 Luni–Vineri, 12:00–17:00</li></ul></div>
+    </div>
+    <div class="footer-bottom">© 2026 YoungMinds · TECH AND PLAY ILECA SRL · CUI 40893168</div>
+  </div>
+</footer>
+</body>
+</html>

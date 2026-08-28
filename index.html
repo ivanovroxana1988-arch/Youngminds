@@ -69,6 +69,23 @@
         "opens": "12:00",
         "closes": "17:00"
       },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+40746220222",
+        "contactType": "customer service",
+        "availableLanguage": ["ro"]
+      },
+      "makesOffer": {
+        "@type": "Offer",
+        "price": "1250",
+        "priceCurrency": "RON",
+        "url": "https://www.youngminds.live/tarife",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Program Afterschool YoungMinds Buzău",
+          "url": "https://www.youngminds.live/afterschool-buzau"
+        }
+      },
       "hasMap": "https://maps.app.goo.gl/a2NB99SR94k7szRo8",
       "sameAs": ["https://maps.app.goo.gl/a2NB99SR94k7szRo8"]
     }
@@ -88,16 +105,16 @@
 </div>
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="index.html"><img src="img/logo.png" alt="YoungMinds — afterschool și loc de joacă"></a>
+    <a class="brand" href="/"><img src="img/logo.png" alt="YoungMinds — afterschool și loc de joacă"></a>
     <button class="burger" aria-label="Meniu" onclick="document.querySelector('.site-nav').classList.toggle('open')"><span></span><span></span><span></span></button>
     <nav class="site-nav">
-      <a href="index.html" class="active">Acasă</a>
-      <a href="contact.html" style="color:var(--orange)">📣 Înscrieri deschise</a>
-      <a href="metoda.html">Metoda</a>
-      <a href="activitati.html">Activități</a>
-      <a href="spatiul.html">Spațiul</a>
-      <a href="tarife.html">Tarife</a>
-      <a class="nav-cta" href="contact.html">Înscriere</a>
+      <a href="/" class="active">Acasă</a>
+      <a href="/contact" style="color:var(--orange)">📣 Înscrieri deschise</a>
+      <a href="/metoda">Metoda</a>
+      <a href="/activitati">Activități</a>
+      <a href="/spatiul">Spațiul</a>
+      <a href="/tarife">Tarife</a>
+      <a class="nav-cta" href="/contact">Înscriere</a>
     </nav>
   </div>
 </header>
@@ -110,8 +127,8 @@
       <h1>Afterschool în Buzău unde temele sunt doar începutul</h1>
       <p class="lead">Teme cu cadru didactic, STEM, club de lectură, creativitate și multă joacă, într-un spațiu sigur pentru copii de 6–12 ani. Un program care respectă ritmul fiecărui copil și îi oferă timp să învețe, să se miște, să exploreze și să fie copil.</p>
       <div class="hero-cta">
-        <a class="btn-primary" href="contact.html">Înscrie copilul →</a>
-        <a class="btn-ghost-light btn-ghost" href="metoda.html">Descoperă metoda</a>
+        <a class="btn-primary" href="/contact">Înscrie copilul →</a>
+        <a class="btn-ghost-light btn-ghost" href="/afterschool-buzau">Vezi programul afterschool</a>
       </div>
       <div class="hero-trust">
         <div>🎯 <b>Copii 6–12 ani</b></div>
@@ -142,6 +159,7 @@
     <div class="mark">✦ &nbsp; ★ &nbsp; ✦</div>
     <h2>Am creat spațiul potrivit pentru a da viață <span class="em">viselor copiilor noștri</span></h2>
     <p>Bazat pe joacă, aplicații practice și experimente științifice, antrenăm ambele emisfere — afectivitate și creativitate, rațiune și logică — pentru a crește lideri de succes. În acest secol, adaptabilitatea e atributul care ajută copilul să reușească în viață.</p>
+    <div class="center-cta"><a class="btn-ghost" href="/ghid-afterschool-buzau">Ghid: cum alegi un afterschool în Buzău →</a></div>
   </div>
 </section>
 
@@ -168,12 +186,12 @@
       <p>Mult mai mult decât teme — activități care dezvoltă creativitatea, logica și încrederea.</p>
     </div>
     <div class="act-mini-grid">
-      <a href="activitati.html" class="act-mini reveal"><span>🔬</span>STEM</a>
-      <a href="activitati.html" class="act-mini reveal"><span>🗣️</span>Limbi străine</a>
-      <a href="activitati.html" class="act-mini reveal"><span>📚</span>Club de lectură</a>
-      <a href="activitati.html" class="act-mini reveal"><span>🎨</span>Creativitate</a>
+      <a href="/activitati" class="act-mini reveal"><span>🔬</span>STEM</a>
+      <a href="/activitati" class="act-mini reveal"><span>🗣️</span>Limbi străine</a>
+      <a href="/activitati" class="act-mini reveal"><span>📚</span>Club de lectură</a>
+      <a href="/activitati" class="act-mini reveal"><span>🎨</span>Creativitate</a>
     </div>
-    <div class="center-cta reveal"><a class="btn-ghost" href="activitati.html">Vezi toate activitățile →</a></div>
+    <div class="center-cta reveal"><a class="btn-ghost" href="/activitati">Vezi toate activitățile →</a></div>
   </div>
 </section>
 
@@ -189,7 +207,7 @@
         <span class="tag">Spațiul nostru</span>
         <h2>Un loc luminos, sigur și plin de viață</h2>
         <p>Săli moderne cu tablă interactivă multitouch, un loc de joacă propriu cu gazon și echipamente, și o atmosferă caldă în care fiecare copil se simte ca acasă.</p>
-        <a class="btn-primary" href="spatiul.html">Vizitează spațiul →</a>
+        <a class="btn-primary" href="/spatiul">Vizitează spațiul →</a>
       </div>
     </div>
   </div>
@@ -215,7 +233,7 @@
   <div class="wrap reveal">
     <h2>Înscrierile pentru 2026–2027 sunt deschise.</h2>
     <p>Vino să vezi locul, cunoaște echipa și descoperă cum arată o zi la YoungMinds. Locurile sunt limitate, iar grupele se completează în ordinea înscrierii.</p>
-    <a class="btn-primary" href="contact.html">Înscrie copilul →</a>
+    <a class="btn-primary" href="/contact">Înscrie copilul →</a>
   </div>
 </section>
 <footer class="site-footer">
@@ -228,11 +246,13 @@
       <div>
         <h4>Navighează</h4>
         <ul>
-          <li><a href="contact.html">📣 Înscrieri deschise 2026–2027</a></li>
-          <li><a href="metoda.html">Metoda noastră</a></li>
-          <li><a href="activitati.html">Activități</a></li>
-          <li><a href="spatiul.html">Spațiul nostru</a></li>
-          <li><a href="tarife.html">Tarife &amp; program</a></li>
+          <li><a href="/afterschool-buzau">Afterschool Buzău</a></li>
+          <li><a href="/ghid-afterschool-buzau">Ghid pentru părinți</a></li>
+          <li><a href="/contact">📣 Înscrieri deschise 2026–2027</a></li>
+          <li><a href="/metoda">Metoda noastră</a></li>
+          <li><a href="/activitati">Activități</a></li>
+          <li><a href="/spatiul">Spațiul nostru</a></li>
+          <li><a href="/tarife">Tarife &amp; program</a></li>
         </ul>
       </div>
       <div>
